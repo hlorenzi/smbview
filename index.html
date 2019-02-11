@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Super Mario Bros. Level Viewer</title>
+	</head>
+	
+	
+	<style>
+		body
+		{
+			font-family: Verdana, sans-serif;
+		}
+		
+		#divMainLayout
+		{
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: auto auto auto;
+			grid-align: center;
+			justify-items: center;
+			align-items: center;
+			text-align: center;
+			grid-row-gap: 2em;
+		}
+	</style>
+
+	
+	<body>
+		<div id="divMainLayout">
+			<div style="grid-row:1; grid-column:1;">
+				<input type="file" id="inputFile" accept=".nes"></input>
+				<br>
+				<br>
+				<div style="width:80vw; overflow-x:scroll;">
+					<canvas id="canvasMain" width="5120" height="240"></canvas>
+				</div>
+			</div>
+			
+			<div style="grid-row:2; grid-column:1;">
+				World
+				<input id="inputWorldNum" type="text" value="1" style="width:2em;"></input>
+				Area
+				<input id="inputAreaNum" type="text" value="1" style="width:2em;"></input>
+				<br>
+				<br>
+				<label for="checkboxDebug"><input id="checkboxDebug" type="checkbox"></input> Draw Debug</label>
+			</div>
+		</div>
+	</body>
+
+	
+	<script src="src/main.js" type="module"></script>
+	
+	
+</html>
